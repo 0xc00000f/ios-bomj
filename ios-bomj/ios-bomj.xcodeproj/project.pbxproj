@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80DE632068192B1FBF06836B /* Pods_ios_bomj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C23A0DDCA711E5CE2B49A19 /* Pods_ios_bomj.framework */; };
 		D7B93CD827E34ABB00934313 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B93CD727E34ABB00934313 /* AppDelegate.swift */; };
 		D7B93CDA27E34ABB00934313 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B93CD927E34ABB00934313 /* SceneDelegate.swift */; };
 		D7B93CDC27E34ABB00934313 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B93CDB27E34ABB00934313 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		141DDE1518E164F1426759FD /* Pods-ios-bomj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-bomj.release.xcconfig"; path = "Target Support Files/Pods-ios-bomj/Pods-ios-bomj.release.xcconfig"; sourceTree = "<group>"; };
+		7C23A0DDCA711E5CE2B49A19 /* Pods_ios_bomj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_bomj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D49D02950A4431C30E65FC2 /* Pods-ios-bomj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-bomj.debug.xcconfig"; path = "Target Support Files/Pods-ios-bomj/Pods-ios-bomj.debug.xcconfig"; sourceTree = "<group>"; };
 		D7B93CD427E34ABB00934313 /* ios-bomj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-bomj.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B93CD727E34ABB00934313 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7B93CD927E34ABB00934313 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80DE632068192B1FBF06836B /* Pods_ios_bomj.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB0104B4BC4212B3A2C3151F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D49D02950A4431C30E65FC2 /* Pods-ios-bomj.debug.xcconfig */,
+				141DDE1518E164F1426759FD /* Pods-ios-bomj.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D665107E5E66B89ECD991F5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C23A0DDCA711E5CE2B49A19 /* Pods_ios_bomj.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D7B93CCB27E34ABB00934313 = {
 			isa = PBXGroup;
 			children = (
 				D7B93CD627E34ABB00934313 /* ios-bomj */,
 				D7B93CD527E34ABB00934313 /* Products */,
+				BB0104B4BC4212B3A2C3151F /* Pods */,
+				D665107E5E66B89ECD991F5B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7B93CE827E34ABD00934313 /* Build configuration list for PBXNativeTarget "ios-bomj" */;
 			buildPhases = (
+				D51A25495229DC9E6C0659B7 /* [CP] Check Pods Manifest.lock */,
 				D7B93CD027E34ABB00934313 /* Sources */,
 				D7B93CD127E34ABB00934313 /* Frameworks */,
 				D7B93CD227E34ABB00934313 /* Resources */,
+				6BDE2C19B1A4DAA1FE9815AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6BDE2C19B1A4DAA1FE9815AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios-bomj/Pods-ios-bomj-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios-bomj/Pods-ios-bomj-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios-bomj/Pods-ios-bomj-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D51A25495229DC9E6C0659B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ios-bomj-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D7B93CD027E34ABB00934313 /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		D7B93CE927E34ABD00934313 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D49D02950A4431C30E65FC2 /* Pods-ios-bomj.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +382,7 @@
 		};
 		D7B93CEA27E34ABD00934313 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 141DDE1518E164F1426759FD /* Pods-ios-bomj.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
