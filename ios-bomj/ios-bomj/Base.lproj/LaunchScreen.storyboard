@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,10 +12,44 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Pzr-g4-eld">
+                                <rect key="frame" x="90.666666666666686" y="244" width="247" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="J6o-JQ-dho"/>
+                                    <constraint firstAttribute="width" constant="247" id="d0q-ag-6Pm"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="simbirSoft" translatesAutoresizingMaskIntoConstraints="NO" id="wvZ-T7-tX6">
+                                <rect key="frame" x="156" y="828.66666666666663" width="116" height="15.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="Usw-Fv-y3x"/>
+                                    <constraint firstAttribute="height" constant="15.5" id="yHI-kX-PUH"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Загрузка..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyD-tR-rzP">
+                                <rect key="frame" x="180" y="638" width="68" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="0li-ux-1CW"/>
+                                    <constraint firstAttribute="width" constant="68" id="AAK-Ye-7Xd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.28629529479999999" green="0.29019397499999999" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.94130212069999997" green="0.95278555149999999" blue="0.96470767260000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Pzr-g4-eld" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="2sT-ZN-nTS"/>
+                            <constraint firstItem="wvZ-T7-tX6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ekl-ED-L2E"/>
+                            <constraint firstItem="hyD-tR-rzP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="a0A-fl-tRI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hyD-tR-rzP" secondAttribute="bottom" constant="239" id="aTn-J5-8bb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wvZ-T7-tX6" secondAttribute="bottom" constant="48" id="cNI-SS-PUJ"/>
+                            <constraint firstItem="Pzr-g4-eld" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qhz-EN-Pnh"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -22,4 +57,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="251" height="77"/>
+        <image name="simbirSoft" width="116" height="16"/>
+    </resources>
 </document>
