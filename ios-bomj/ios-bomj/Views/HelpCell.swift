@@ -22,6 +22,9 @@ class HelpCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "test"
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = UIColor(red: 158/255, green: 191/255, blue: 80/255, alpha: 1)
+        label.font = UIFont(name: "Officina-San-ITC-Extra-Bold.ttf", size: 13)
+
         label.textAlignment = .center
         return label
     }()
@@ -50,20 +53,17 @@ class HelpCell: UICollectionViewCell {
 
         NSLayoutConstraint.activate([
             categoryImage.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            categoryImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 1/4 * self.bounds.width),
-            categoryImage.widthAnchor.constraint(lessThanOrEqualTo: self.widthAnchor, multiplier: 2/3),
-            //(equalToConstant: self.bounds.width - 80),
-            categoryImage.heightAnchor.constraint(lessThanOrEqualTo: self.heightAnchor, multiplier: 3/5)
-            //(equalToConstant: self.bounds.height - 80),
+            categoryImage.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -1/12 * self.bounds.height),
+            categoryImage.widthAnchor.constraint(lessThanOrEqualTo: self.widthAnchor, multiplier: 6/8),
+            categoryImage.heightAnchor.constraint(lessThanOrEqualTo: self.heightAnchor, multiplier: 5/8)
         ])
 
         NSLayoutConstraint.activate([
             categoryLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             categoryLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -14),
             categoryLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            categoryLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            categoryLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20)
         ])
-
 
     }
 

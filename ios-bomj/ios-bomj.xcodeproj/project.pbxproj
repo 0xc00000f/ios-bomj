@@ -19,6 +19,8 @@
 		D7C9C0BC280DF90500B975B2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C0BB280DF90500B975B2 /* ProfileViewController.swift */; };
 		D7C9C0BF280E361000B975B2 /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C0BE280E361000B975B2 /* Help.swift */; };
 		D7C9C0C1280E372100B975B2 /* HelpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C0C0280E372100B975B2 /* HelpCell.swift */; };
+		D7C9C0C5280E535C00B975B2 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C0C4280E535C00B975B2 /* CustomTabBar.swift */; };
+		D7C9C0CD280F92CC00B975B2 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C0CC280F92CC00B975B2 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,9 @@
 		D7C9C0BB280DF90500B975B2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D7C9C0BE280E361000B975B2 /* Help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
 		D7C9C0C0280E372100B975B2 /* HelpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCell.swift; sourceTree = "<group>"; };
+		D7C9C0C4280E535C00B975B2 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		D7C9C0C9280F756700B975B2 /* Officina-San-ITC-Extra-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Officina-San-ITC-Extra-Bold.ttf"; sourceTree = "<group>"; };
+		D7C9C0CC280F92CC00B975B2 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +98,10 @@
 				D7B93CD727E34ABB00934313 /* AppDelegate.swift */,
 				D7C9C0B2280DF81F00B975B2 /* TabBarController.swift */,
 				D7B93CE227E34ABD00934313 /* LaunchScreen.storyboard */,
+				D7C9C0C8280F748E00B975B2 /* Fonts */,
 				D7B93CE027E34ABD00934313 /* Assets.xcassets */,
 				D7B93CE527E34ABD00934313 /* Info.plist */,
+				D7C9C0C3280E533400B975B2 /* Helpers */,
 				D7C9C0BD280E35E200B975B2 /* Models */,
 				D7C9C0C2280E376100B975B2 /* Views */,
 				D7C9C0B4280DF8A000B975B2 /* Controllers */,
@@ -126,8 +133,25 @@
 			isa = PBXGroup;
 			children = (
 				D7C9C0C0280E372100B975B2 /* HelpCell.swift */,
+				D7C9C0CC280F92CC00B975B2 /* HeaderView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D7C9C0C3280E533400B975B2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D7C9C0C4280E535C00B975B2 /* CustomTabBar.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D7C9C0C8280F748E00B975B2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D7C9C0C9280F756700B975B2 /* Officina-San-ITC-Extra-Bold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +166,7 @@
 				D7B93CD127E34ABB00934313 /* Frameworks */,
 				D7B93CD227E34ABB00934313 /* Resources */,
 				6BDE2C19B1A4DAA1FE9815AA /* [CP] Embed Pods Frameworks */,
+				D7C9C0CE280F9FDF00B975B2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -237,6 +262,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D7C9C0CE280F9FDF00B975B2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -250,6 +292,8 @@
 				D7B93CD827E34ABB00934313 /* AppDelegate.swift in Sources */,
 				D7C9C0BA280DF8F700B975B2 /* HistoryViewController.swift in Sources */,
 				D7C9C0BC280DF90500B975B2 /* ProfileViewController.swift in Sources */,
+				D7C9C0C5280E535C00B975B2 /* CustomTabBar.swift in Sources */,
+				D7C9C0CD280F92CC00B975B2 /* HeaderView.swift in Sources */,
 				D7C9C0B6280DF8DA00B975B2 /* FindViewController.swift in Sources */,
 				D7C9C0BF280E361000B975B2 /* Help.swift in Sources */,
 				D7C9C0B8280DF8E900B975B2 /* HelpViewController.swift in Sources */,

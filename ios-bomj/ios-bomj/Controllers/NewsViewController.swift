@@ -15,6 +15,4 @@ class NewsViewController: UIViewController {
         view.backgroundColor = .green
     }
 
-
 }
-

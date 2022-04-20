@@ -7,4 +7,5 @@ target 'ios-bomj' do
 
   # Pods for ios-bomj
   pod 'Alamofire', '~> 5.5'
+  pod 'SwiftLint', :configurations => ['Debug']
 end
